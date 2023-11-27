@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url(ltoplace.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 255, 0.5); /* Adjust the color and opacity as needed */
+  }
+  
+  .wrapper {
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(9px);
+    color: #fff;
+    border-radius: 12px;
+    padding: 30px 40px;
+  }
+  
+  .wrapper h1 {
+    font-size: 30px;
+    text-align: center;
+  }
+  
+  .wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+  }
+  
+  .input-box input {
+    width: calc(100% - 5px);
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+  }
+  
+  .input-box input::placeholder {
+    color: #fff;
+  }
+  
+  .input-box i {
+    position: absolute;
+    right: 30px;
+    top: 85%; /* Adjust the percentage as needed to position the icon slightly below the center */
+    transform: translateY(-50%);
+    font-size: 20px;
+  }
+
+  .input-box .eye-icon:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+  
+.wrapper .btn {
+  width: 100%;
+  height: 45px;
+  background: #fff; /* White background */
+  border: none;
+  outline: none;
+  border-radius: 40px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1); /* Subtle shadow */
+  cursor: pointer;
+  font-size: 16px;
+  color: #333; /* Dark text color */
+  font-weight: 600; /* Bold font */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.wrapper .btn:hover {
+  background-color: #007bff; /* Light blue background on hover */
+  color: #fff; /* White text color on hover */
+  box-shadow: 0 0 15px rgba(0, 0, 0, .2); /* Slightly larger shadow on hover for a 'lifted' effect */
+}
+
+
+  .wrapper p {
+    font-size: 18px; /* Increased font size */
+    color: #ffffff; /* White color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Subtle text shadow for better readability */
+    margin-top: 20px; /* Adjusted top margin */
+    text-align: center; /* Center alignment */
+}
+
+.wrapper p a {
+    color: #007bff; /* Light blue text color for the link */
+    text-decoration: none; /* Removing underline from link */
+    font-weight: 600; /* Making the font slightly bold */
+    transition: color 0.3s ease; /* Smooth transition for color change on hover */
+}
+
+.wrapper p a:hover {
+    color: #0056b3; /* Darker shade of blue on hover */
+    text-decoration: underline; /* Adding underline on hover for better user interaction */
+}
+
+

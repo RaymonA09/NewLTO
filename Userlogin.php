@@ -46,8 +46,8 @@ function displayUserProfile($conn, $userId) {
     
         // Use Bootstrap classes to center the card
         echo "<div class='d-flex justify-content-center align-items-center' style='height: 100vh;'>";
-        echo "<div class='card shadow-lg' style='max-width: 80rem; width: 100%;'>"; // Set a max-width for the card and allow it to be responsive
-        echo "<div class='card-header bg-dark text-white d-flex justify-content-between align-items-center'>";
+        echo "<div class='card shadow-lg' style='max-width: 60rem; width: 100%;   border-radius: 20px;'>"; // Set a max-width for the card and allow it to be responsive
+        echo "<div class='card-header bg-dark text-white d-flex justify-content-between align-items-center' style='border-radius: 10px;'>";
         echo "<h5 class='mb-0'>Welcome, " . htmlspecialchars($userDetails['FIRSTNAME']) . "!</h5>";
         echo "<div class='btn-toolbar'>";
         // Use button classes for both User ID and Log Out elements

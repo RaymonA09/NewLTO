@@ -84,28 +84,31 @@ if ($result === false) {
 }
 
 .edit-btn, .done-btn {
-    background-color: black; /* Transparent background */
-    color: white; /* White text */
+    font-family: 'Poppins', sans-serif; /* Updated font family */
+    background: #141E30;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #243B55, #141E30);
+    color: #fff;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-family: 'Roboto', sans-serif; /* Stylish font */
-    font-weight: 700; /* Bold font */
+    font-weight: 600; /* Bold font */
     font-size: 16px; /* Slightly larger font size */
     margin: 4px 2px;
     cursor: pointer;
-    border: 2px solid white; /* White border */
-    border-radius: 4px;
+    border: 3px solid #141E30;
+    border-radius: 20px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle text shadow for depth */
     transition: all 0.3s ease; /* Transition effect for smooth color change */
 }
 
 .edit-btn:hover, .done-btn:hover {
-    background-color: white; /* White background on hover */
-    color: black; /* Black text on hover */
-    border-color: black; /* Black border on hover */
-    text-shadow: none; /* Remove text shadow on hover for contrast */
+    background: #141E30;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #c1c1c1, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #b4b4b4, #787878);
+            color: black;
+            border: 3px solid #eee;
 }
 
 

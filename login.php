@@ -17,7 +17,15 @@ unset($_SESSION['attempted_username']);
     <title>Login page</title>
     <link rel="stylesheet" href="styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .wrapper .btn:hover {
+  background-color: #007bff; /* Light blue background on hover */
+  color: #fff; /* White text color on hover */
+  box-shadow: 0 0 15px rgba(0, 0, 0, .2); /* Slightly larger shadow on hover for a 'lifted' effect */
+}
+    </style>
 </head>
+
 <body>
 <div class="wrapper">
     <form method="post" action="Userlogin.php">

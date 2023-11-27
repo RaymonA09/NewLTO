@@ -211,6 +211,7 @@ if($conn==false){
 }else {echo 'Connection Successfully established';}
 
 
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && $validationPassed){
 $Lastname=$_POST['Lastname'];
 $Firstname=$_POST['Firstname'];

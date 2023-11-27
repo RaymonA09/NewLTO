@@ -22,18 +22,18 @@
 
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml"> 
-  <head>
+<head>
     <meta charset="utf-8">
-    <meta name="viewport" 
-    content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="form.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500&display=swap" rel="stylesheet"> <!-- Google Font Link -->
     <title>LTO Form</title>
     <style>
         body, html {
             height: 100%;
             margin: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #eceff1; /* Change the background color as per your preference */
+            font-family: 'Poppins', sans-serif; /* Updated font family */
+            background-color: #eceff1;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -45,8 +45,8 @@
             padding: 40px;
             border-radius: 20px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            width: 300px; /* Adjust width as needed */
-            margin-top: 50px; /* Adjust margin as needed */
+            width: 350px;
+            margin-top: 50px;
         }
 
         h2 {
@@ -55,38 +55,46 @@
         }
 
         button {
-            background-color: #0056b3; /* Adjust button color as needed */
-            color: white;
+            font-family: 'Poppins', sans-serif; /* Updated font family */
+            background: #141E30;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #243B55, #141E30);
+            color: #fff;
             padding: 10px 20px;
-            border: none;
-            border-radius: 5px; /* Rounded corners for the button */
+            border: 3px solid #141E30;
+            border-radius: 20px;
             font-size: 16px;
             cursor: pointer;
             margin-top: 20px;
-            width: 100%; /* Button width is the same as the card width */
+            width: 100%;
+            transition: transform 0.2s ease, background-color 0.2s ease; /* Transition for transform and background color */
         }
 
         button:hover {
-            background-color: #004494;
+            background: #141E30;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #c1c1c1, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #b4b4b4, #787878);
+            color: #fff;
+            border: 3px solid #eee;
         }
 
-        a {
-            color: white;
+        button a {
+            color: inherit; /* Inherits color from the button */
+            text-decoration: none;
+            display: block;
+        }
+
+        button a:hover {
             text-decoration: none;
         }
-
-        a:hover {
-            text-decoration: underline;
-        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div class="card">
         <h2>Welcome, <?php echo $userID['FIRSTNAME']; ?> <?php echo $userID['LASTNAME']; ?></h2>
         <button><a href="Registerget.php">View my records</a></button>
         <button><a href="TOAupdate.php?userid=<?php echo urlencode($userID['USERID']); ?>">Change Application Details</a></button>
         <button><a href="register.html" class="edit-btn">Done</a></button>
-
     </div>
 </body>
-  </body>
+</html>

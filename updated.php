@@ -13,7 +13,57 @@ $conn = sqlsrv_connect($serverName, $connectionOptions);
 if ($conn === false) {
     die(print_r(sqlsrv_errors(), true));
 }
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Update</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        button {
+            font-family: 'Poppins', sans-serif; /* Updated font family */
+            background: #141E30;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #243B55, #141E30);
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            border: 3px solid #eee;
 
+        }
+        button:hover {
+            background: #141E30;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #c1c1c1, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #b4b4b4, #787878);
+            color: black;
+            border: 3px solid #eee;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <?php
 // Check if the form was submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION['editUserID'])) {
     $userid = $_SESSION['editUserID'];
@@ -69,14 +119,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION['editUserID'])) {
     ];
 
     $stmt = sqlsrv_query($conn, $sql, $params);
-    if ($stmt === false) {
-        die(print_r(sqlsrv_errors(), true));
-    } else {
-        echo "Record updated successfully.";
-        echo "<a href='registerget.php?userid=" . urlencode($userid) . "'><button>View My Updated Record</button></a>";
-
-    }
-} else {
-    echo "Invalid request";
-}
+            if ($stmt === false) {
+                echo "<p>Error updating record: " . print_r(sqlsrv_errors(), true) . "</p>";
+            } else {
+                echo "<p>Record updated successfully.</p>";
+                echo "<a href='registerget.php?userid=" . urlencode($userid) . "'><button>View Updated Record</button></a>";
+            }
+        } else {
+            echo "<p>Invalid request</p>";
+        }
+        ?>
+    </div>
+</body>
+</html>
+<?php
+// End of PHP
 ?>
